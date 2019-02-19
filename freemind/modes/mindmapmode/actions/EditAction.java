@@ -138,8 +138,8 @@ public class EditAction extends AbstractAction implements ActorXml {
 		boolean isHtmlNode = HtmlTools.isHtmlNode(text);
 		boolean isLongNode = node.getIsLong();
 
-		// do we need a decision if plain or HTML editing?
-		String useRichTextInNewLongNodes = (isHtmlNode) ? "true" : "false";
+		// only use rich text to edit
+		String useRichTextInNewLongNodes = "true";
 		// if the node is not already html, we ask if rich text or plain text
 		// edit.
 		if (!isHtmlNode && !isLongNode && editLong) {
