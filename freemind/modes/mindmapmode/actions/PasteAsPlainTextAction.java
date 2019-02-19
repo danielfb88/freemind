@@ -69,6 +69,7 @@ public class PasteAsPlainTextAction extends AbstractAction {
 						.getTransferData(DataFlavor.stringFlavor);
 				// sometimes these (for XML illegal) characters occur
 				plainText = HtmlTools.makeValidXml(plainText);
+				plainText = HtmlTools.noBreakLine(plainText);
 				logger.info("Pasting string " + plainText);
 				// paste.
 				MindMapNode selected = mMindMapController.getSelected();

@@ -594,6 +594,18 @@ public class HtmlTools {
 	public static String makeValidXml(String pXmlNoteText) {
 		return pXmlNoteText.replaceAll("\0", "").replaceAll("&#0;", "");
 	}
+	
+	/**
+	 * Remove break line on string
+	 * 
+	 * @author Daniel Bonfim <daniel.fb88@gmail.com>
+	 * @since 19-02-19
+	 * @param pXmlNoteText
+	 * @return
+	 */
+	public static String noBreakLine(String pXmlNoteText) {
+		return pXmlNoteText.replaceAll("\n", " ");
+	}
 
 	public static String replaceIllegalXmlCharacters(String fileContents) {
 		// replace &xa; by newline.
